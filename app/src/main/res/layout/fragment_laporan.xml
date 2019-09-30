@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaporanFragment"
+    android:background="@android:color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ambil Photo"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="4dp"/>
+
+                <ImageView
+                    android:id="@+id/img_photokejadian"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/arf_layout_border"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="photogambar"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kejadian"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:background="@drawable/arf_layout_border"
+                    android:id="@+id/jeniskejadian"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laporan"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/lapor_laporan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/arf_layout_border"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:id="@+id/btn_lapor"
+                    android:layout_below="@+id/lapor_laporan"
+                    android:background="@drawable/arf_btn_mod"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Simpan"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>
