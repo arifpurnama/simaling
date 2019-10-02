@@ -2,6 +2,7 @@ package com.bahri.simaling;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,30 +16,42 @@ import android.widget.Toast;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.bahri.simaling.Utils.Userparselable;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.util.HashMap;
+import java.util.Map;
+import android.util.Log;
 
 public class Login extends AppCompatActivity {
-     public TextView aktivasi;
+    public TextView aktivasi;
 
+    private ProgressDialog progress;
+    private RequestQueue requestQueue;
+    StringRequest stringRequest;
 
     private EditText t_username, t_password;
     private Button btnlogin;
-    private ParseContent parseContent;
-    private final int LoginTask = 1;
-    private PreferenceHelper preferenceHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        parseContent = new ParseContent(this);
-        preferenceHelper = new PreferenceHelper(this);
 
         t_username = (EditText) findViewById(R.id.username);
         t_password = (EditText) findViewById(R.id.password);
         btnlogin = (Button) findViewById(R.id.btn_login);
         aktivasi=(TextView)findViewById(R.id.l_aktivasi);
-
+        requestQueue = Volley.newRequestQueue(this);
 
         //Pindah ke aktivasi
         aktivasi.setOnClickListener(new View.OnClickListener() {
@@ -52,63 +65,89 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent utama=new Intent(Login.this, Utama.class);
-                startActivity(utama);
-//                try {
-//                    login();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-
+                login();
             }
         });
     }
 
-    private void login() throws IOException, JSONException{
-        if (!Utils.isNetworkAvailable(Login.this)) {
-            Toast.makeText(Login.this, "Memerlukan koneksi Internet!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        Utils.showSimpleProgressDialog(Login.this);
-        final HashMap<String, String> map = new HashMap<>();
-        map.put(Constants.Params.NOKTP, t_username.getText().toString());
-        map.put(Constants.Params.PASSWORD1, t_password.getText().toString());
-        new AsyncTask<Void, Void, String>(){
-            protected String doInBackground(Void[] params) {
-                String response="";
-                try {
-                    HttpRequest req = new HttpRequest(Constants.ServiceType.LOGIN);
-                    response = req.prepare(HttpRequest.Method.POST).withData(map).sendAndReadString();
-                } catch (Exception e) {
-                    response=e.getMessage();
+    private void login() {
+        if(!validasi()) return;
+            progress = new ProgressDialog(this);
+            progress.setMessage("inisialisasi ... ");
+            progress.show();
+            String url = "http://192.168.43.58/Lingkungan/Api/login.php?";
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    Userparselable userparselable = new Userparselable();
+                    Log.i("Response JSON", "" + response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        if (jsonObject.names().get(0).equals("success")) {
+                            t_username.setText("");
+                            t_password.setText("");
+                            userparselable.setId(jsonObject.getJSONArray("pengguna").getJSONObject(0).getInt("id"));
+                            userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nik"));
+                            userparselable.setPass(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("passsword"));
+                            userparselable.setNama(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nama"));
+                            userparselable.setImage(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("image"));
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
+                            progress.dismiss();
+                            Intent intent = new Intent(getApplicationContext(), Utama.class);
+                            intent.putExtra("datauser", userparselable);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                            Log.i("Request JSON", "" + jsonObject.getString("error"));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    progress.dismiss();
                 }
-                return response;
-            }
-            protected void onPostExecute(String result) {
-                //do something with response
-                Log.d("Pesan", result);
-                onTaskCompleted(result,LoginTask);
-            }
-        }.execute();
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), "Tidak Ada Koneksi", Toast.LENGTH_SHORT).show();
+                    progress.dismiss();
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    String snik = t_username.getText().toString();
+                    String spass = t_password.getText().toString();
+
+                    Map<String, String> parameter = new HashMap<>();
+                    parameter.put("nik", snik);
+                    parameter.put("password", spass);
+                    return parameter;
+                }
+            };
+
+            requestQueue.add(stringRequest);
     }
 
-    private void onTaskCompleted(String response,int task) {
-        Log.d("responsejson", response.toString());
-        Utils.removeSimpleProgressDialog();
-        switch (task) {
-            case LoginTask:
-                if (parseContent.isSuccess(response)) {
-                    parseContent.saveInfo(response);
-                    Toast.makeText(Login.this, "Login Berhasil!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, Utama.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                    this.finish();
-                }else {
-                    Toast.makeText(Login.this, parseContent.getErrorMessage(response), Toast.LENGTH_SHORT).show();
-                }
+    private boolean validasi() {
+        boolean valid = true;
+        String snik = t_username.getText().toString();
+        String spass = t_password.getText().toString();
+
+        if(snik.isEmpty()){
+            t_username.setError("NIK tidak boleh kosong");
+            valid = false;
+        }else {
+            t_username.setError(null);
         }
+
+        if(spass.isEmpty()){
+            t_password.setError("Password Tidak boleh kosong");
+            valid = false;
+        }else {
+            t_password.setError(null);
+        }
+
+        return valid;
     }
+
 }

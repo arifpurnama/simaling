@@ -10,8 +10,8 @@ public class Constants {
 
     public class Params {
         public static final String NOKTP     = "nik";
-        public static final String PASSWORD1 = "password1";
-        public static final String PASSWORD2 = "password2";
+        public static final String PASSWORD = "password";
+//        public static final String PASSWORD = "password2";
         public static final String NOTELP    = "telp";
        }
 }

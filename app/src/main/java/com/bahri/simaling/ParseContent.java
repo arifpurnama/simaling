@@ -31,7 +31,6 @@ public class ParseContent {
             if (jsonObject.optString(KEY_SUCCESS).equals("true")) {
                 return true;
             } else {
-
                 return false;
             }
 
