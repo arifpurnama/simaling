@@ -10,6 +10,62 @@ public class Userparselable implements Parcelable{
     private String nama;
     private String image;
     private String notlp;
+    private String alamat;
+    private String rt;
+    private String rw;
+    private String kel;
+    private String kab;
+    private String negara;
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public String getRt() {
+        return rt;
+    }
+
+    public void setRt(String rt) {
+        this.rt = rt;
+    }
+
+    public String getRw() {
+        return rw;
+    }
+
+    public void setRw(String rw) {
+        this.rw = rw;
+    }
+
+    public String getKel() {
+        return kel;
+    }
+
+    public void setKel(String kel) {
+        this.kel = kel;
+    }
+
+    public String getKab() {
+        return kab;
+    }
+
+    public void setKab(String kab) {
+        this.kab = kab;
+    }
+
+    public String getNegara() {
+        return negara;
+    }
+
+    public void setNegara(String negara) {
+        this.negara = negara;
+    }
+
+
 
     public String getNotlp() {
         return notlp;
@@ -63,13 +119,19 @@ public class Userparselable implements Parcelable{
 
     }
 
-    public Userparselable(int id, String nik, String pass, String nama, String image, String notlp) {
+    public Userparselable(int id, String nik, String pass, String nama, String image, String notlp,String alamat, String rt,String rw,String kel,String kab,String negara) {
         this.id = id;
         this.nik = nik;
         this.pass = pass;
         this.nama = nama;
         this.image = image;
         this.notlp = notlp;
+        this.alamat=alamat;
+        this.rt=rt;
+        this.rw=rw;
+        this.kel=kel;
+        this.kab=kab;
+        this.negara=negara;
     }
 
     @Override
@@ -85,6 +147,12 @@ public class Userparselable implements Parcelable{
         dest.writeString(this.nama);
         dest.writeString(this.image);
         dest.writeString(this.notlp);
+        dest.writeString(this.alamat);
+        dest.writeString(this.rt);
+        dest.writeString(this.rw);
+        dest.writeString(this.kel);
+        dest.writeString(this.kab);
+        dest.writeString(this.negara);
     }
 
     protected Userparselable(Parcel in) {
@@ -94,6 +162,12 @@ public class Userparselable implements Parcelable{
         this.nama = in.readString();
         this.image = in.readString();
         this.notlp = in.readString();
+        this.alamat=in.readString();
+        this.rt=in.readString();
+        this.rw=in.readString();
+        this.kel=in.readString();
+        this.kab=in.readString();
+        this.negara=in.readString();
     }
 
     public static final Creator<Userparselable> CREATOR = new Creator<Userparselable>() {
