@@ -42,13 +42,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nama : AAAAAAAAAA"
+                            android:text="Nama : Saeful Bahri"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Email : arifp@gmail.com"
+                            android:text="Email : saefulbahrisaja@gmail.com"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
