@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity {
             progress = new ProgressDialog(this);
             progress.setMessage("inisialisasi ... ");
             progress.show();
-            String url = "http://192.168.43.58/Lingkungan/Api/login.php?";
+            String url = "http://192.168.56.1/Lingkungan/Api/login.php?";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
                             t_password.setText("");
                             userparselable.setId(jsonObject.getJSONArray("pengguna").getJSONObject(0).getInt("id"));
                             userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nik"));
-                            userparselable.setPass(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("passsword"));
+                            userparselable.setPass(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("pass"));
                             userparselable.setNama(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nama"));
                             userparselable.setImage(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("image"));
                             Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
