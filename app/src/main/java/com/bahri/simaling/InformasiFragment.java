@@ -23,7 +23,7 @@ public class InformasiFragment extends Fragment {
 
     private RequestQueue requestQueue;
     private RecyclerView recyclerView;
-    private ArrayList<InformasiData> informasi = new ArrayList<InformasiData>() ;
+
     private InformasiFragment instace;
 
     public InformasiFragment() {
