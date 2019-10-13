@@ -85,9 +85,11 @@ public class daftar extends AppCompatActivity {
                         noktp.setText("");
                         password.setText("");
                         notelepon.setText("");
+                        userparselable.setId(jsonObject.getJSONArray("pengguna").getJSONObject(0).getInt("id"));
                         userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nik"));
-                        userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("passsword"));
-                        userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("notlp"));
+                        userparselable.setPass(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("pass"));
+                        userparselable.setNama(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nama"));
+                        userparselable.setImage(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("image"));
                         Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
                         progress.dismiss();
                         Intent intent = new Intent(getApplicationContext(), Utama.class);
