@@ -21,10 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.bahri.simaling.NewsAdapter;
-import com.bahri.simaling.AppController;
-import com.bahri.simaling.NewsData;
-import com.bahri.simaling.Server;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,8 +43,7 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
     ListView list;
     SwipeRefreshLayout swipe;
     List<NewsData> newsList = new ArrayList<NewsData>();
-    private static final String TAG = MainActivity.class.getSimpleName();
-
+    private static final String TAG = InformasiFragment.class.getSimpleName();
     private static String url_list   = Server.URL + "news.php?offset=";
 
     private int offSet = 0;
