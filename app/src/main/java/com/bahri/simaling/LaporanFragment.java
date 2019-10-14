@@ -116,14 +116,14 @@ public class LaporanFragment extends Fragment {
                     protected Map<String, String> getParams() throws AuthFailureError {
                         String snik = ktp.getText().toString();
                         String stgl = tgl.getText().toString();
-                        String sjenis = jenis.getSelectedItem().toString();
+                        //String sjenis = jenis.getSelectedItem().toString();
                         String spesan=pesan.getText().toString();
 
 
                         Map<String, String> parameter = new HashMap<>();
                         parameter.put("nik", snik);
                         parameter.put("tgl", stgl);
-                        parameter.put("jenis",sjenis);
+                        //parameter.put("jenis",sjenis);
                         parameter.put("pesan",spesan);
 
                         return parameter;
