@@ -33,8 +33,8 @@ public class LaporanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_laporan, container, false);
-        nama=(EditText) view.findViewById(R.id.nik);
-        ktp=(EditText) view.findViewById(R.id.nama);
+        nama=(EditText) view.findViewById(R.id.nama);
+        ktp=(EditText) view.findViewById(R.id.nik);
 
         try{
             Bundle bundle = getActivity().getIntent().getExtras();

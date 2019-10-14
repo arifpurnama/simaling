@@ -32,9 +32,11 @@ import java.util.HashMap;
 import java.util.Map;
 import android.util.Log;
 
+import com.bahri.simaling.Preference;
+
 public class Login extends AppCompatActivity {
     public TextView aktivasi;
-
+    Preference sharedPrefManager;
     private ProgressDialog progress;
     private RequestQueue requestQueue;
     StringRequest stringRequest;
@@ -52,7 +54,13 @@ public class Login extends AppCompatActivity {
         btnlogin = (Button) findViewById(R.id.btn_login);
         aktivasi=(TextView)findViewById(R.id.l_aktivasi);
         requestQueue = Volley.newRequestQueue(this);
+        sharedPrefManager = new Preference(this);
 
+        if (sharedPrefManager.getSPSudahLogin()){
+            startActivity(new Intent(Login.this, Utama.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+            finish();
+        }
         //Pindah ke aktivasi
         aktivasi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +74,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 login();
+
             }
         });
     }
@@ -97,10 +106,12 @@ public class Login extends AppCompatActivity {
                             userparselable.setNegara(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("negara"));
                             userparselable.setImage(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("image"));
                             Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
-                            progress.dismiss();
-                            Intent intent = new Intent(getApplicationContext(), Utama.class);
-                            intent.putExtra("datauser", userparselable);
-                            startActivity(intent);
+                            String nik = jsonObject.getString("success");
+                            sharedPrefManager.saveSPString(Preference.SP_NIK, nik);
+                            sharedPrefManager.saveSPBoolean(Preference.SP_SUDAH_LOGIN, true);
+                            startActivity(new Intent(getApplicationContext(), Utama.class)
+                                    .putExtra("datauser", userparselable)
+                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                             finish();
                         } else {
                             Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
