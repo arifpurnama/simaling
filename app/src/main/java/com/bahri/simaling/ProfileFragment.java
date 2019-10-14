@@ -62,14 +62,14 @@ private CircleImageView gambar;
                 negara.setText(user.getNegara());
 
                 if(!user.getImage().equals("Gambar Kosong")){
-                    String url_image = "http://192.168.1.5/lingkungan/"+user.getImage();
+                    String url_image = "http://192.168.1.5/Lingkungan/"+user.getImage();
                     url_image = url_image.replace(" ","%20");
                     try {
                        Log.i("Memuat Gambar: ",""+url_image);
                        Glide.with(getActivity()).load(url_image).into(gambar);
                    } catch (Exception e) {
                        e.printStackTrace();
-                    }
+                   }
                }
 
 
