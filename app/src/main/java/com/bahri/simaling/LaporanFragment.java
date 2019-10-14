@@ -30,7 +30,6 @@ public class LaporanFragment extends Fragment {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private EditText nama,ktp,tgl,pesan;
-    private Button tombol;
     private int ident;
     private Userparselable user;
     public LaporanFragment() {
@@ -46,9 +45,9 @@ public class LaporanFragment extends Fragment {
         nama=(EditText) view.findViewById(R.id.nama);
         ktp=(EditText) view.findViewById(R.id.nik);
         tgl=(EditText) view.findViewById(R.id.tgl);
-        tombol=(Button) view.findViewById(R.id.tombol);
 
 
+        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         tgl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

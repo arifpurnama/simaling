@@ -80,11 +80,6 @@
                     android:inputType="textMultiLine"
                     android:background="@drawable/arf_layout_border"
                     android:layout_marginBottom="16dp"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="tgl"
-                    android:id="@+id/tombol"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
