@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
             android:name=".Utama"
-            android:label="@string/title_activity_utama"></activity>
+            android:label="@string/title_activity_utama" />
         <activity android:name=".daftar" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
