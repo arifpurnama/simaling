@@ -25,6 +25,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bahri.simaling.Utils.Userparselable;
 
@@ -67,8 +68,9 @@ public class LaporanFragment extends Fragment {
         ktp=(EditText) view.findViewById(R.id.nik);
         tgl=(EditText) view.findViewById(R.id.tgl);
         jenis=(Spinner) view.findViewById(R.id.jenis);
+        pesan=(EditText) view.findViewById(R.id.pesan);
         simpan=(Button) view.findViewById(R.id.btn_lapor);
-
+        requestQueue = Volley.newRequestQueue(getActivity());
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
