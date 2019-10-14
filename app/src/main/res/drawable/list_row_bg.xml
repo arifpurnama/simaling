@@ -3,6 +3,6 @@
     android:shape="rectangle">
     <gradient
         android:startColor="@color/cardview_shadow_end_color"
-        android:endColor="@color/colorAccent"
+        android:endColor="@color/cardview_shadow_start_color"
         android:angle="270" />
 </shape>
