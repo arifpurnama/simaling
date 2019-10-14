@@ -32,9 +32,11 @@ import java.util.HashMap;
 import java.util.Map;
 import android.util.Log;
 
+import com.bahri.simaling.Preference;
+
 public class Login extends AppCompatActivity {
     public TextView aktivasi;
-
+    Preference sharedPrefManager;
     private ProgressDialog progress;
     private RequestQueue requestQueue;
     StringRequest stringRequest;
@@ -52,7 +54,13 @@ public class Login extends AppCompatActivity {
         btnlogin = (Button) findViewById(R.id.btn_login);
         aktivasi=(TextView)findViewById(R.id.l_aktivasi);
         requestQueue = Volley.newRequestQueue(this);
+        sharedPrefManager = new Preference(this);
 
+        if (sharedPrefManager.getSPSudahLogin()){
+            startActivity(new Intent(Login.this, Utama.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+            finish();
+        }
         //Pindah ke aktivasi
         aktivasi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +74,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 login();
+
             }
         });
     }
@@ -75,7 +84,7 @@ public class Login extends AppCompatActivity {
             progress = new ProgressDialog(this);
             progress.setMessage("inisialisasi ... ");
             progress.show();
-            String url = "http://192.168.43.58/Lingkungan/Api/login.php?";
+            String url = "http://192.168.56.1/Lingkungan/Api/login.php?";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -88,14 +97,21 @@ public class Login extends AppCompatActivity {
                             t_password.setText("");
                             userparselable.setId(jsonObject.getJSONArray("pengguna").getJSONObject(0).getInt("id"));
                             userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nik"));
-                            userparselable.setPass(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("passsword"));
                             userparselable.setNama(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nama"));
+                            userparselable.setAlamat(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("alamat"));
+                            userparselable.setRt(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("rt"));
+                            userparselable.setRw(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("rw"));
+                            userparselable.setKel(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("kel"));
+                            userparselable.setKab(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("kab"));
+                            userparselable.setNegara(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("negara"));
                             userparselable.setImage(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("image"));
                             Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
-                            progress.dismiss();
-                            Intent intent = new Intent(getApplicationContext(), Utama.class);
-                            intent.putExtra("datauser", userparselable);
-                            startActivity(intent);
+                            String nik = jsonObject.getString("success");
+                            sharedPrefManager.saveSPString(Preference.SP_NIK, nik);
+                            sharedPrefManager.saveSPBoolean(Preference.SP_SUDAH_LOGIN, true);
+                            startActivity(new Intent(getApplicationContext(), Utama.class)
+                                    .putExtra("datauser", userparselable)
+                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                             finish();
                         } else {
                             Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();

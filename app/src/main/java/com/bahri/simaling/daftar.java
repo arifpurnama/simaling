@@ -73,7 +73,7 @@ public class daftar extends AppCompatActivity {
         progress = new ProgressDialog(this);
         progress.setMessage("inisialisasi ... ");
         progress.show();
-        String url = "http://192.168.43.58/Lingkungan/Api/daftar.php?";
+        String url = "http://192.168.56.1/Lingkungan/Api/daftar.php?";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -85,9 +85,16 @@ public class daftar extends AppCompatActivity {
                         noktp.setText("");
                         password.setText("");
                         notelepon.setText("");
+                        userparselable.setId(jsonObject.getJSONArray("pengguna").getJSONObject(0).getInt("id"));
                         userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nik"));
-                        userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("passsword"));
-                        userparselable.setNik(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("notlp"));
+                        userparselable.setNama(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("nama"));
+                        userparselable.setAlamat(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("alamat"));
+                        userparselable.setRt(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("rt"));
+                        userparselable.setRw(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("rw"));
+                        userparselable.setKel(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("kel"));
+                        userparselable.setKab(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("kab"));
+                        userparselable.setNegara(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("negara"));
+                        userparselable.setImage(jsonObject.getJSONArray("pengguna").getJSONObject(0).getString("image"));
                         Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
                         progress.dismiss();
                         Intent intent = new Intent(getApplicationContext(), Utama.class);

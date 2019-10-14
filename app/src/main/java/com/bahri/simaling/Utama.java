@@ -1,5 +1,6 @@
 package com.bahri.simaling;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -10,10 +11,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 import android.widget.TextView;
-
+import com.bahri.simaling.Preference;
 public class Utama extends AppCompatActivity {
     private TextView mTextMessage;
-
+    Preference sharedPrefManager;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -39,7 +40,10 @@ public class Utama extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                    sharedPrefManager.saveSPBoolean(Preference.SP_SUDAH_LOGIN, false);
+                    startActivity(new Intent(Utama.this, Login.class)
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+                    finish();
                     return true;
             }
             return false;
@@ -54,7 +58,7 @@ public class Utama extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content, homeFragment);
         fragmentTransaction.commit();
-
+        sharedPrefManager = new Preference(this);
 
         BottomNavigationView navView = findViewById(R.id.navigation);
         mTextMessage = findViewById(R.id.message);
