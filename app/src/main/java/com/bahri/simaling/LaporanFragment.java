@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -19,7 +20,7 @@ import com.bahri.simaling.Utils.Userparselable;
  * A simple {@link Fragment} subclass.
  */
 public class LaporanFragment extends Fragment {
-    private TextView nama,ktp;
+    private EditText nama,ktp;
     private int ident;
     private Userparselable user;
     public LaporanFragment() {
@@ -32,8 +33,8 @@ public class LaporanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_laporan, container, false);
-        nama=(TextView) view.findViewById(R.id.nama_profile);
-        ktp=(TextView) view.findViewById(R.id.nik_profile);
+        nama=(EditText) view.findViewById(R.id.nik);
+        ktp=(EditText) view.findViewById(R.id.nama);
 
         try{
             Bundle bundle = getActivity().getIntent().getExtras();
