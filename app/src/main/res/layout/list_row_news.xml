@@ -4,20 +4,19 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-
-    android:background="@drawable/bg_image">
+    android:background="@drawable/arf_text_mod">
 
     <TextView
         android:id="@+id/news_judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue_grey_500"
         android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/news_timestamp"
         android:layout_width="match_parent"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue_grey_500"
         android:layout_height="wrap_content" />
 
     <com.android.volley.toolbox.NetworkImageView
@@ -26,14 +25,14 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue_grey_500"
         android:layout_height="wrap_content"
         android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/news_isi"
         android:layout_width="match_parent"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue_grey_500"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
