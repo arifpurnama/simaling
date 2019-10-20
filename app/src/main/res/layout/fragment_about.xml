@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,6 +22,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Developer"
+                    android:textSize="24dp"
+                    android:textColor="@color/colorBlack"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -30,7 +40,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@color/colorBlack"/>
+                        android:src="@drawable/man"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -63,7 +73,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@color/colorBlack"/>
+                        android:src="@drawable/man"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -75,13 +85,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nama : AAAAAAAAAA"
+                            android:text="Arif Purnama"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Email : arifp@gmail.com"
+                            android:text="arifpurnama6@gmail.com"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -96,7 +106,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@color/colorBlack"/>
+                        android:src="@drawable/man"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -108,13 +118,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nama : AAAAAAAAAA"
+                            android:text="Vincensius Santiago Pardede"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Email : arifp@gmail.com"
+                            android:text="vincentnba15@gmail.com"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -129,7 +139,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@color/colorBlack"/>
+                        android:src="@drawable/man"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -141,13 +151,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nama : AAAAAAAAAA"
+                            android:text="Ibrahim Bangkit Nugraha"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Email : arifp@gmail.com"
+                            android:text="ibrahimbangkit@gmail.com"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -162,7 +172,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@color/colorBlack"/>
+                    android:src="@drawable/man"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -174,13 +184,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Nama : AAAAAAAAAA"
+                        android:text="Mokhamad Agung Gumelar"
                         android:textColor="@color/colorBlack"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Email : arifp@gmail.com"
+                        android:text="mokhammadagunk@gmail.com"
                         android:textColor="@color/colorBlack"/>
 
                 </LinearLayout>
@@ -195,7 +205,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@color/colorBlack"/>
+                        android:src="@drawable/man"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -207,13 +217,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nama : AAAAAAAAAA"
+                            android:text="Ghifary Anshar Ariestiand"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Email : arifp@gmail.com"
+                            android:text="ghifaryanshar13@gmail.com"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -228,7 +238,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@color/colorBlack"/>
+                        android:src="@drawable/woman"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,13 +250,112 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nama : AAAAAAAAAA"
+                            android:text="Pritty"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Email : arifp@gmail.com"
+                            android:text="aswerpritty@gmail.com"
+                            android:textColor="@color/colorBlack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/man"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yogi Firdaus"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="yogifirdaus24@gmail.com"
+                            android:textColor="@color/colorBlack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/woman"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Zulfah Na'imah"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="zulfafat99@gmail.com"
+                            android:textColor="@color/colorBlack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/woman"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Aira Elzahra"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="amidahsiti66@gmail.com"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
