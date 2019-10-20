@@ -71,11 +71,12 @@
         android:id="@+id/l_aktivasi"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Aktivasi Akun..!"
+        android:text="Silahkan daftarkan NIK anda disini"
+        android:layout_marginTop="12dp"
         android:textSize="12dp"
-        android:layout_marginTop="14dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/blue_grey_500"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
+        android:clickable="true"
         android:layout_below="@id/btn_login"/>
 </RelativeLayout>
