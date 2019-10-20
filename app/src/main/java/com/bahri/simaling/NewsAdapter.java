@@ -52,7 +52,7 @@ public class NewsAdapter extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.list_rows_news, null);
+            convertView = inflater.inflate(R.layout.list_row_news, null);
 
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
