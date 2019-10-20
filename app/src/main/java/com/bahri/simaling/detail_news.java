@@ -74,14 +74,14 @@ public class detail_news extends Fragment implements OnRefreshListener {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_detail_news, container, false);
         super.onCreate(savedInstanceState);
-
+        swipe = (SwipeRefreshLayout)view.findViewById(R.id.swipe_refresh_layout);
         thumb_image = (NetworkImageView) view.findViewById(R.id.gambar_news);
         judul       = (TextView) view.findViewById(R.id.judul_news);
         tgl         = (TextView) view.findViewById(R.id.tgl_news);
         isi         = (TextView) view.findViewById(R.id.isi_news);
-        swipe       = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_layout);
 
-        id_news = getActivity().getIntent().getStringExtra(TAG_ID);
+        //final String value = getArguments().getString(TAG_ID);
+        id_news = getArguments().getString(TAG_ID);
 
         swipe.setOnRefreshListener(this);
         swipe.post(new Runnable() {

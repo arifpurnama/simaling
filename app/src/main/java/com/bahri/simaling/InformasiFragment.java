@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener;
 
@@ -83,9 +84,15 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(getActivity(), detail_news.class);
-                intent.putExtra(TAG_ID, newsList.get(position).getId());
-                getActivity().startActivity(intent);
+                detail_news detail = new detail_news ();
+                Bundle args = new Bundle();
+                args.putString(TAG_ID, newsList.get(position).getId());
+                detail.setArguments(args);
+                getFragmentManager().beginTransaction().add(R.id.content, detail).commit();
+
+                //Intent intent = new Intent(getActivity(), detail_news.class);
+                //intent.putExtra(TAG_ID, newsList.get(position).getId());
+               // getActivity().startActivity(intent);
 
             }
         });
