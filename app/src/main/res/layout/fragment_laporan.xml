@@ -98,9 +98,15 @@
                     android:layout_height ="100dp"
                     android:layout_weight ="1"
                     android:inputType="textCapSentences|textMultiLine"
-                    android:maxLines ="4"
+                    android:background="@drawable/arf_text_mod"
                     android:maxLength ="2000"
-                    android:hint ="Pesan untuk pengurus ke RTan"
+                    android:gravity="top|left"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/blue_grey_500"
+                    android:textColor="@color/blue_grey_500"
+                    android:layout_marginTop="19dp"
+                    android:hint ="PESAN UNTUK PENGURUS...."
                     android:scrollHorizontally="false"
                     android:layout_marginBottom="16dp"/>
                 <Button
