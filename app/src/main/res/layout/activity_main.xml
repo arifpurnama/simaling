@@ -18,14 +18,15 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="255dp"
             android:layout_marginBottom="20dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/logo" />
 
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/avi"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="67dp"
+            android:layout_height="255dp"
             android:visibility="visible"
             app:indicatorColor="#FF9800"
             app:indicatorName="BallScaleRippleMultipleIndicator" />
