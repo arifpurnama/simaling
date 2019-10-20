@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/blue_300"
+    android:background="@color/white"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -18,9 +18,9 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="185dp"
             android:layout_marginBottom="20dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/logo" />
 
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/avi"
