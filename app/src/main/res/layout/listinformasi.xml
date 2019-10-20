@@ -13,9 +13,9 @@
         <ListView
             android:id="@+id/list_news"
             android:layout_width="match_parent"
+            android:divider="@color/blue_grey_50"
+            android:dividerHeight="1dp"
             android:layout_height="wrap_content"
-            android:divider="@color/list_divider"
-            android:dividerHeight="2dp"
             android:listSelector="@drawable/list_row_selector" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

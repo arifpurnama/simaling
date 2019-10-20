@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_grey_50"
     android:orientation="vertical" >
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -13,8 +14,6 @@
             android:id="@+id/list_news"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@color/list_divider"
-            android:dividerHeight="2dp"
             android:listSelector="@drawable/list_row_selector" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
