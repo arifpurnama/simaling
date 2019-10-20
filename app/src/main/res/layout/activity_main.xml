@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#59d58d"
+    android:background="@color/blue_300"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -13,18 +13,21 @@
         android:id="@+id/lv_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:src="@mipmap/ic_launcher"/>
 
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/avi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
             android:visibility="visible"
-            app:indicatorName="PacmanIndicator"/>
+            app:indicatorColor="#FF9800"
+            app:indicatorName="BallScaleRippleMultipleIndicator" />
     </LinearLayout>
 </LinearLayout>

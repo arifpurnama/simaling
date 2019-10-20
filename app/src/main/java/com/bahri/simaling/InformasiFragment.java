@@ -75,6 +75,7 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        getActivity().setTitle("Informasi");
         View view =  inflater.inflate(R.layout.fragment_informasi, container, false);
         swipe = (SwipeRefreshLayout)view.findViewById(R.id.swipe_refresh_layout);
         list = (ListView) view.findViewById(R.id.list_news);

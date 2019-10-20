@@ -22,12 +22,14 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/label1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="FORM WAJIB LAPOR"
-                    android:textSize="24dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorBlack"/>
+                    android:layout_marginTop="10dp"
+                    android:textSize="22dp"
+                    android:textColor="@color/blue_grey_500"
+                    android:textAlignment="center" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -89,8 +91,6 @@
                     android:background="@drawable/arf_text_mod"
                     android:textColor="@color/blue_grey_500"
                     android:layout_marginTop="19dp" />
-
-
 
                 <EditText
                     android:id ="@+id/pesan"
