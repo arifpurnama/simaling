@@ -82,9 +82,10 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Intent intent = new Intent(getActivity(), detail_news.class);
                 intent.putExtra(TAG_ID, newsList.get(position).getId());
-                startActivity(intent);
+                getActivity().startActivity(intent);
 
             }
         });
