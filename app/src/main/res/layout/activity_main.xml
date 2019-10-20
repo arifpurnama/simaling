@@ -18,9 +18,9 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="185dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/logo" />
+            android:src="@mipmap/ic_launcher"/>
 
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/avi"
