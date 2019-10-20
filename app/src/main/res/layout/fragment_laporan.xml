@@ -26,12 +26,14 @@
                     android:layout_height="wrap_content"
                     android:text="FORM WAJIB LAPOR"
                     android:textSize="24dp"
+                    android:fontFamily="@font/roboto_slab"
                     android:layout_gravity="center"
                     android:textColor="@color/colorBlack"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="NIK"
+                    android:fontFamily="@font/roboto_slab_light"
                     android:textColor="@color/colorBlack"
                     android:layout_marginBottom="4dp"/>
 
@@ -40,6 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
+                    android:fontFamily="@font/roboto_slab"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:inputType="textMultiLine"
@@ -49,6 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Nama Lengkap"
+                    android:fontFamily="@font/roboto_slab_light"
                     android:textColor="@color/colorBlack"
                     android:layout_marginBottom="4dp"/>
 
@@ -59,6 +63,7 @@
                     android:textColor="#000000"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_slab"
                     android:inputType="textMultiLine"
                     android:background="@drawable/arf_layout_border"
                     android:layout_marginBottom="16dp"/>
@@ -67,6 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Tgl Berakhir"
+                    android:fontFamily="@font/roboto_slab_light"
                     android:textColor="@color/colorBlack"
                     android:layout_marginBottom="4dp"/>
 
@@ -75,6 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
+                    android:fontFamily="@font/roboto_slab"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:inputType="textMultiLine"
@@ -84,6 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Jenis Laporan"
+                    android:fontFamily="@font/roboto_slab_light"
                     android:textColor="@color/colorBlack"
                     android:layout_marginBottom="4dp"/>
                 <Spinner
@@ -95,6 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pesan"
+                    android:fontFamily="@font/roboto_slab_light"
                     android:textColor="@color/colorBlack"
                     android:layout_marginBottom="4dp"/>
 
@@ -106,6 +115,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:inputType="textMultiLine"
+                    android:fontFamily="@font/roboto_slab"
                     android:background="@drawable/arf_layout_border"
                     android:layout_marginBottom="16dp"/>
                 <Button
@@ -115,6 +125,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="Simpan"
+                    android:fontFamily="@font/roboto_slab_bold"
                     android:textSize="18dp"
                     android:textAllCaps="false"/>
 

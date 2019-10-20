@@ -19,6 +19,7 @@
         android:src="@mipmap/ic_launcher" />
     <TextView
         android:id="@+id/label1"
+        android:fontFamily="@font/roboto_slab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Form Login"
@@ -31,6 +32,7 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/arf_text_mod"
+        android:fontFamily="@font/roboto_slab_light"
         android:layout_marginTop="19dp"
         android:inputType="number"
         android:hint="No. KTP"
@@ -44,6 +46,7 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/arf_text_mod"
+        android:fontFamily="@font/roboto_slab_light"
         android:layout_marginTop="19dp"
         android:hint="Password"
         android:textSize="15dp"
@@ -61,15 +64,17 @@
         android:textSize="18dp"
         android:textAllCaps="false"
         android:background="@drawable/arf_btn_mod"
+        android:fontFamily="@font/roboto_slab_bold"
         android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:id="@+id/btn_login"/>
     <TextView
         android:id="@+id/l_aktivasi"
+        android:fontFamily="@font/roboto_slab_bold"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Aktivasi Akun..!"
-        android:textSize="12dp"
+        android:textSize="14dp"
         android:layout_marginTop="14dp"
         android:textColor="@color/colorAccent"
         android:layout_centerHorizontal="true"
