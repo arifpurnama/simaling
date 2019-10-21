@@ -66,13 +66,11 @@ private CircleImageView gambar;
                     url_image = url_image.replace(" ","%20");
                     try {
                        Log.i("Memuat Gambar: ",""+url_image);
-                       Glide.with(getActivity()).load(url_image).into(gambar);
+                       Glide.with(getActivity()).load(url_image).placeholder(R.drawable.userst).error(R.drawable.userst).into(gambar);
                    } catch (Exception e) {
                        e.printStackTrace();
                    }
                }
-
-
             }
         }catch (Exception e){
             e.printStackTrace();
