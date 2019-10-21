@@ -22,101 +22,97 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/label1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="FORM WAJIB LAPOR"
-                    android:textSize="24dp"
                     android:fontFamily="@font/roboto_slab"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorBlack"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="NIK"
-                    android:fontFamily="@font/roboto_slab_light"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginBottom="4dp"/>
+                    android:layout_marginTop="10dp"
+                    android:textSize="22dp"
+                    android:textColor="@color/blue_grey_500"
+                    android:textAlignment="center" />
 
                 <EditText
-                    android:id="@+id/nik"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
+                    android:textAllCaps="true"
+                    android:background="@drawable/arf_text_mod"
                     android:fontFamily="@font/roboto_slab"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:inputType="textMultiLine"
-                    android:background="@drawable/arf_layout_border"
-                    android:layout_marginBottom="16dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Nama Lengkap"
-                    android:fontFamily="@font/roboto_slab_light"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginBottom="4dp"/>
+                    android:layout_marginTop="19dp"
+                    android:textColor="@color/blue_grey_500"
+                    android:textColorHint="@color/blue_grey_500"
+                    android:drawableLeft="@drawable/ic_credit_card_black_24dp"
+                    android:drawablePadding="13dp"
+                    android:padding="16dp"
+                    android:hint="NO. KTP"
+                    android:layout_below="@id/label1"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nik"/>
 
                 <EditText
-                    android:id="@+id/nama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
+                    android:textColorHint="@color/blue_grey_500"
+                    android:textColor="@color/blue_grey_500"
+                    android:textAllCaps="true"
+                    android:background="@drawable/arf_text_mod"
+                    android:layout_marginTop="19dp"
+                    android:drawableLeft="@drawable/ic_face_black_24dp"
+                    android:drawablePadding="13dp"
+                    android:padding="16dp"
+                    android:hint="NAMA LENGKAP"
                     android:fontFamily="@font/roboto_slab"
-                    android:inputType="textMultiLine"
-                    android:background="@drawable/arf_layout_border"
-                    android:layout_marginBottom="16dp"/>
+                    android:inputType="textPersonName"
+                    android:layout_below="@id/username"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nama"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tgl Berakhir"
-                    android:fontFamily="@font/roboto_slab_light"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginBottom="4dp"/>
+
 
                 <EditText
-                    android:id="@+id/tgl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
+                    android:textColorHint="@color/blue_grey_500"
+                    android:textColor="@color/blue_grey_500"
+                    android:textAllCaps="true"
+                    android:background="@drawable/arf_text_mod"
+                    android:layout_marginTop="19dp"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawablePadding="13dp"
+                    android:padding="16dp"
+                    android:hint="TANGGAL KEMBALI "
                     android:fontFamily="@font/roboto_slab"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:inputType="textMultiLine"
-                    android:background="@drawable/arf_layout_border"
-                    android:layout_marginBottom="16dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Jenis Laporan"
-                    android:fontFamily="@font/roboto_slab_light"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginBottom="4dp"/>
+                    android:inputType="textPersonName"
+                    android:layout_below="@id/username"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/tgl"/>
                 <Spinner
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/jenis"/>
-
-                <TextView
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pesan"
-                    android:fontFamily="@font/roboto_slab_light"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginBottom="4dp"/>
+                    android:id="@+id/jenis"
+                    android:padding="10dp"
+
+                    android:background="@drawable/arf_text_mod"
+                    android:textColor="@color/blue_grey_500"
+                    android:layout_marginTop="19dp" />
 
                 <EditText
-                    android:id="@+id/pesan"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:textColor="#000000"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:inputType="textMultiLine"
+                    android:id ="@+id/pesan"
+                    android:layout_width ="match_parent"
+                    android:layout_height ="100dp"
+                    android:layout_weight ="1"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:background="@drawable/arf_text_mod"
+                    android:maxLength ="2000"
+                    android:gravity="top|left"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/blue_grey_500"
+                    android:textColor="@color/blue_grey_500"
+                    android:layout_marginTop="19dp"
+                    android:hint ="PESAN UNTUK PENGURUS...."
                     android:fontFamily="@font/roboto_slab"
-                    android:background="@drawable/arf_layout_border"
+                    android:scrollHorizontally="false"
                     android:layout_marginBottom="16dp"/>
                 <Button
                     android:id="@+id/btn_lapor"

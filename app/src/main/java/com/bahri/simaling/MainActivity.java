@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         lv_loading=(LinearLayout) findViewById(R.id.lv_loading);
         avi=(AVLoadingIndicatorView) findViewById(R.id.avi);
 
-        avi.setIndicator("PacmanIndicator");
+        avi.setIndicator("BallScaleMultipleIndicator");
 
         //Delay
         new Handler().postDelayed(new Runnable() {

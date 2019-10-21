@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener;
 
@@ -74,6 +75,7 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        getActivity().setTitle("Informasi");
         View view =  inflater.inflate(R.layout.fragment_informasi, container, false);
         swipe = (SwipeRefreshLayout)view.findViewById(R.id.swipe_refresh_layout);
         list = (ListView) view.findViewById(R.id.list_news);
@@ -82,9 +84,17 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), detail_news.class);
-                intent.putExtra(TAG_ID, newsList.get(position).getId());
-                startActivity(intent);
+
+                detail_news detail = new detail_news ();
+                Bundle args = new Bundle();
+                args.putString(TAG_ID, newsList.get(position).getId());
+                detail.setArguments(args);
+                getFragmentManager().beginTransaction().add(R.id.content, detail).commit();
+
+                //Intent intent = new Intent(getActivity(), detail_news.class);
+                //intent.putExtra(TAG_ID, newsList.get(position).getId());
+               // getActivity().startActivity(intent);
+
             }
         });
 
@@ -185,9 +195,6 @@ public class InformasiFragment extends Fragment implements OnRefreshListener {
                                 } catch (JSONException e) {
                                     Log.e(TAG, "JSON Parsing error: " + e.getMessage());
                                 }
-
-                                // notifying list adapter about data changes
-                                // so that it renders the list view with updated data
                                 adapter.notifyDataSetChanged();
                             }
                         }

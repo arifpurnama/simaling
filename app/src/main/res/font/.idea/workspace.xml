@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="44eb8c79-664b-4a8d-9764-f07ed86e2ff4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-hdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-mdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-xhdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-xxhdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-xxxhdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/arf_text_lis_berita.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/arf_text_spin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_credit_card_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_date_range_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_face_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_hp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_logo_layanan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_vpn_key_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/spinner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/bahri/simaling/InformasiFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/bahri/simaling/InformasiFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/bahri/simaling/LaporanFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/bahri/simaling/LaporanFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/bahri/simaling/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/bahri/simaling/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/bahri/simaling/NewsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/bahri/simaling/NewsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/bahri/simaling/detail_news.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/bahri/simaling/detail_news.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_btn_mod.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_btn_mod.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_icon_information.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_icon_information.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_icon_laporan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_icon_laporan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_icon_panic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_icon_panic.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_icon_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_icon_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_layout_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_layout_border.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_layout_mod.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_layout_mod.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/arf_text_mod.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/arf_text_mod.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/bg_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/bg_image.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/bg_indicator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/bg_indicator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/list_row_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/list_row_selector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/tombol_mod.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_daftar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_daftar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_detail_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_detail_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_informasi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_informasi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_laporan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_laporan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/list_rows_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/list_row_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/listinformasi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/listinformasi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/strings.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="258" />
+    <option name="y" value="1" />
+    <option name="width" value="979" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44eb8c79-664b-4a8d-9764-f07ed86e2ff4" name="Default Changelist" comment="" />
+      <created>1571614131216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571614131216</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.3295302" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Flutter Inspector" />
+      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Android WiFi ADB" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>

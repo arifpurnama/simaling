@@ -4,6 +4,7 @@ package com.bahri.simaling;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -45,7 +48,8 @@ import java.util.Map;
 public class LaporanFragment extends Fragment {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
-
+    String[] JenisLaporan = {"Pilih Jenis Laporan", "Bertamu", "Pergi", "Warga Baru"};
+    String jenislap;
     private EditText nama,ktp,tgl,pesan;
     private Spinner jenis;
     private Button simpan;
@@ -71,6 +75,28 @@ public class LaporanFragment extends Fragment {
         pesan=(EditText) view.findViewById(R.id.pesan);
         simpan=(Button) view.findViewById(R.id.btn_lapor);
         requestQueue = Volley.newRequestQueue(getActivity());
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.row, R.id.text, JenisLaporan);
+        jenis.setAdapter(adapter);
+
+
+        jenis.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                jenislap=String.valueOf(jenis.getSelectedItem());
+                if(position==0){
+                    jenis.setSelection(1);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
