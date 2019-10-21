@@ -52,14 +52,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Saeful Bahri"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="saefulbahrisaja@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -87,14 +87,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Arif Purnama"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Email : arifpurnama6@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -122,14 +122,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Vincensius Santiago Pardede"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="vincentnba15@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -157,14 +157,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Ibrahim Bangkit Nugraha"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="ibrahimbangkit@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -192,14 +192,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Mokhamad Agung Gumelar"
-                        android:fontFamily="@font/roboto_slab"
+                        android:fontFamily="@font/roboto_slab_bold"
                         android:textColor="@color/colorBlack"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="mokhammadagunk@gmail.com"
-                        android:fontFamily="@font/roboto_slab_light"
+                        android:fontFamily="@font/roboto_slab"
                         android:textColor="@color/colorBlack"/>
 
                 </LinearLayout>
@@ -227,14 +227,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Ghifary Anshar Ariestiand"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="ghifaryanshar13@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -262,14 +262,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Pritty"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="aswerpritty@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -295,14 +295,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Aira Elzahra"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="air.rrrzahra@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -328,14 +328,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Yogi Firdaus"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="yogifirdaus24@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -361,14 +361,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Zulfah Na'imah"
-                            android:fontFamily="@font/roboto_slab"
+                            android:fontFamily="@font/roboto_slab_bold"
                             android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="zulfafat99@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab"
                             android:textColor="@color/colorBlack"/>
                     </LinearLayout>
                 </LinearLayout>
