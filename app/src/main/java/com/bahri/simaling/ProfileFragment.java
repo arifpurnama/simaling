@@ -75,7 +75,6 @@ private CircleImageView gambar;
         }catch (Exception e){
             e.printStackTrace();
         }
-
         return view;
     }
 
