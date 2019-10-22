@@ -84,7 +84,7 @@ public class Login extends AppCompatActivity {
             progress = new ProgressDialog(this);
             progress.setMessage("inisialisasi ... ");
             progress.show();
-            String url = "http://192.168.56.1/Lingkungan/Api/login.php?";
+            String url = "http://192.168.43.19/Lingkungan/Api/login.php?";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -149,8 +149,8 @@ public class Login extends AppCompatActivity {
         String snik = t_username.getText().toString();
         String spass = t_password.getText().toString();
 
-        if(snik.isEmpty()){
-            t_username.setError("NIK tidak boleh kosong");
+        if(snik.isEmpty() ||t_username.length() < 16 || t_username.length() > 16){
+            t_username.setError("NIK tidak boleh kosong dan NIK harus 16 Digit");
             valid = false;
         }else {
             t_username.setError(null);

@@ -73,7 +73,7 @@ public class daftar extends AppCompatActivity {
         progress = new ProgressDialog(this);
         progress.setMessage("inisialisasi ... ");
         progress.show();
-        String url = "http://192.168.56.1/Lingkungan/Api/daftar.php?";
+        String url = "http://192.168.43.19/Lingkungan/Api/daftar.php?";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -137,9 +137,10 @@ public class daftar extends AppCompatActivity {
         boolean valid = true;
         String snik = noktp.getText().toString();
         String spass = password.getText().toString();
+        String sno = notelepon.getText().toString();
 
-        if(snik.isEmpty()){
-            noktp.setError("NIK tidak boleh kosong");
+        if(snik.isEmpty() || noktp.length() < 16 || noktp.length() > 16){
+            noktp.setError("NIK tidak boleh kosong dan NIK harus 16 Digit");
             valid = false;
         }else {
             noktp.setError(null);
@@ -150,6 +151,13 @@ public class daftar extends AppCompatActivity {
             valid = false;
         }else {
             password.setError(null);
+        }
+
+        if(sno.isEmpty()){
+            notelepon.setError("No Telepon tidak boleh kosong");
+            valid = false;
+        }else{
+            notelepon.setError(null);
         }
 
         return valid;
