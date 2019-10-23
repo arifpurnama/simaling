@@ -73,7 +73,7 @@ public class daftar extends AppCompatActivity {
         progress = new ProgressDialog(this);
         progress.setMessage("inisialisasi ... ");
         progress.show();
-        String url = "http://192.168.43.19/Lingkungan/Api/daftar.php?";
+        String url = "http://pmeling.000webhostapp.com/Api/daftar.php?";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

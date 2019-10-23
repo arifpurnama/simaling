@@ -62,7 +62,7 @@ private CircleImageView gambar;
                 negara.setText(user.getNegara());
 
                 if(!user.getImage().equals("Gambar Kosong")){
-                    String url_image = "http://192.168.1.5/Lingkungan/"+user.getImage();
+                    String url_image = "http://pmeling.000webhostapp.com/Api/"+user.getImage();
                     url_image = url_image.replace(" ","%20");
                     try {
                        Log.i("Memuat Gambar: ",""+url_image);

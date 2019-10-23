@@ -59,7 +59,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="saefulbahrisaja@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab_thin"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
@@ -93,9 +93,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_slab_thin"
                             android:text="Email : arifpurnama6@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
-                            android:textColor="@color/colorBlack"/>
+                            android:textColor="@color/colorBlack" />
 
                     </LinearLayout>
 
@@ -234,7 +234,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="ghifaryanshar13@gmail.com"
-                            android:fontFamily="@font/roboto_slab_light"
+                            android:fontFamily="@font/roboto_slab_thin"
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
